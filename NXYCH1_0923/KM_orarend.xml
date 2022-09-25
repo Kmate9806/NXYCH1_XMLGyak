@@ -4,7 +4,7 @@
 		<targy nev="Adatkezelés XML-ben" id="GEIAL332-BL"/>
 		<idopont datum="2022.09.23">
 			<nap nap="P"/>
-			<tol tol="12.30-"/>
+			<tol tol="12.30"/>
 			<ig ig="15.30"/>
 		</idopont>
 		<helyszin helyszin="In/101"/>
@@ -26,7 +26,7 @@
 		<targy nev="Adatkezelés XML-ben" id="GEIAL332-BL"/>
 		<idopont datum="2022.10.21">
 			<nap nap="P"/>
-			<tol tol="12.30-"/>
+			<tol tol="12.30"/>
 			<ig ig="15.30"/>
 		</idopont>
 		<helyszin helyszin="In/101"/>
@@ -37,7 +37,7 @@
 		<targy nev="Adatkezelés XML-ben" id="GEIAL332-BL"/>
 		<idopont datum="2022.11.18">
 			<nap nap="P"/>
-			<tol tol="12.30-"/>
+			<tol tol="12.30"/>
 			<ig ig="15.30"/>
 		</idopont>
 		<helyszin helyszin="In/101"/>
