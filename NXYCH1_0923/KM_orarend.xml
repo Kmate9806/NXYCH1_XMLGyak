@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <orarend>
-	<ora id="első" tipus="levelezo">
+	<ora id="elso" tipus="levelezo">
 		<targy nev="Adatkezelés XML-ben" id="GEIAL332-BL"/>
 		<idopont datum="2022.09.23">
 			<nap nap="P"/>
+			<tol tol="12.30-"/>
+			<ig ig="15.30"/>
+		</idopont>
+		<helyszin helyszin="In/101"/>
+		<oktato nev="Dr. Bednarik László"/>
+		<szak szak="Mérnök informatikus (BSc) alapszak (BIL)"/>
+	</ora>
+	<ora id="masodik" tipus="levelezo">
+		<targy nev="Adatkezelés XML-ben" id="GEIAL332-BL"/>
+		<idopont datum="2022.10.07">
+			<nap nap="P"/>
 			<tol tol="12.30"/>
+			<ig ig="15.30"/>
+		</idopont>
+		<helyszin helyszin="In/101"/>
+		<oktato nev="Dr. Bednarik László"/>
+		<szak szak="Mérnök informatikus (BSc) alapszak (BIL)"/>
+	</ora>	
+	<ora id="harmadik" tipus="levelezo">
+		<targy nev="Adatkezelés XML-ben" id="GEIAL332-BL"/>
+		<idopont datum="2022.10.21">
+			<nap nap="P"/>
+			<tol tol="12.30-"/>
+			<ig ig="15.30"/>
+		</idopont>
+		<helyszin helyszin="In/101"/>
+		<oktato nev="Dr. Bednarik László"/>
+		<szak szak="Mérnök informatikus (BSc) alapszak (BIL)"/>
+	</ora>
+		<ora id="negyedik" tipus="levelezo">
+		<targy nev="Adatkezelés XML-ben" id="GEIAL332-BL"/>
+		<idopont datum="2022.11.18">
+			<nap nap="P"/>
+			<tol tol="12.30-"/>
 			<ig ig="15.30"/>
 		</idopont>
 		<helyszin helyszin="In/101"/>
