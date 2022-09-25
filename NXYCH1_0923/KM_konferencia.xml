@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konferencia>
+	<cim id="qwt_123_a" cim="A nagy xml konferencia"/>
+	<hallgatok id="hk_a">
+		<hallgato id="hk_000_a">
+			<nev id="hk_001_a" nev="Pisti"/>
+			<lakcim  id="hk_001_b" lakcim="3531 Miskolc Random utca 1"/>
+			<nev id="hk_002_a" nev="Bela"/>
+			<lakcim id="hk_002_b" lakcim="3532 Miskolc Masik utca 2"/>
+			<nev id="hk_003_a" nev="Tibi"/>
+			<lakcim id="hk_003_b" lakcim="3533 Miskolc Az utca 3"/>
+		</hallgato>
+	</hallgatok>
+	<helyszin id="qwr_123_a" helyszin="3515 Miskolc-Egyetemvaros"/>
+	<eloado id="asd_001_a">
+		<nev id="asd_002_a" nev="Xmles Janos"/>
+		<adoszam id="asd_003_a" adoszam="123456789"/>
+		<lakcim id="asd_004_a" lakcim="3515 Miskolc-Egyetemvaros"/>
+	</eloado>
+<datum id="qwe_123_a" datum="2022.10.06"/>
+</konferencia>
