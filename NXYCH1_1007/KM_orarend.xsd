@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/KM_orarend" xmlns:tns="http://www.example.org/KM_orarend" elementFormDefault="qualified">
+
+<element name="orarend">
+	<complexType>
+		<sequence>
+		
+			<element name="ora">
+				<complexType>
+					<sequence>
+						<element name="id" type="integer"/>
+						<element name="tipus" type="string"/>			
+					</sequence>	
+				</complexType>
+			</element>
+				<element name="targy">
+					<complexType>
+						<sequence>
+							<element name="nev" type="string"/>
+							<element name="id" type="string"/>	
+						</sequence>
+					</complexType>
+				</element>
+				<element name="idopont">
+					<complexType>
+						<sequence>
+							<element name="datum" type="date"/>
+							<element name="nap" type="string"/>
+							<element name="tol" type="integer"/>
+							<element name="ig" type="integer"/>		
+						</sequence>
+					</complexType>
+				</element>
+				<element name="helyszin">
+					<complexType>
+						<sequence>
+							<element name="helyszin" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="oktato">
+					<complexType>
+						<sequence>
+							<element name="nev" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="szak">
+					<complexType>
+						<sequence>
+							<element name="szak" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>
