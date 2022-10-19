@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/KM_nevjegykartya" xmlns:tns="http://www.example.org/KM_nevjegykartya" elementFormDefault="qualified">
+<element name="nevjegykartyak">
+	<complexType>
+		<sequence>
+			<element name="nevjegykartya">
+				<complexType>
+					<sequence>
+						<element name="id" type="integer"></element>
+						<element name="nev" type="string"></element>
+						<element name="ceg">
+							<complexType>
+								<sequence>
+									<element name="cim">
+										<complexType>
+											<sequence>
+												<element name="hazszam" type="integer"></element>
+												<element name="utca" type="string"></element>
+												<element name="varos" type="string"></element>
+												<element name="iranyitoszam" type="integer"></element>
+											</sequence>
+										</complexType>
+									</element>
+									<element name="nev" type="string"></element>
+									<element name="telefonszam">
+										<complexType>
+											<sequence>
+												<element name="korzet"></element>
+											</sequence>
+										</complexType>
+									</element>
+									<element name="weblap" type="anyURI"></element>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="beosztas" type="string"></element>
+						<element name="telefonszam">
+							<complexType>
+								<sequence>
+									<element name="korzet"></element>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="email" type="string"></element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>	
+</element>
+</schema>
