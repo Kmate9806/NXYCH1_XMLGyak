@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/XMLSchemaNXYCH1"
+	xmlns:tns="http://www.example.org/XMLSchemaNXYCH1"
+	elementFormDefault="qualified">
+	<element name="betegnyilvantartorendszer">
+		<complexType>
+			<sequence>
+
+				<element name="betegnyilvantartas">
+					<complexType>
+						<sequence>
+							<!-- < beteg adatai > -->
+							<element name="beteg">
+								<complexType>
+									<sequence>
+										<element name="teljes_nev">
+											<complexType>
+												<sequence>
+													<element name="vezeteknev" type="string"></element>
+													<element name="keresztnev" type="string"></element>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="kor" type="integer"></element>
+										<element name="orvos_azonosito" type="integer"></element>
+										<element name="telefonszam" type="integer"></element>
+										<element name="beteg_azonositokod" type="integer">
+											<unique name="PKbeteg_azonositokod">
+												<selector xpath="beteg" />
+												<field xpath="beteg_azonositokod" />
+											</unique>
+										</element>
+										<element name="bekerules_datuma" type="date"></element>
+										<element name="kezeloorvos" type="string"></element>
+									</sequence>
+									<attribute name="id" type="string" />
+								</complexType>
+							</element>
+							<!-- < korhazak adatai > -->
+							<element name="korhaz">
+								<complexType>
+									<sequence>
+										<element name="cim" type="string"></element>
+										<element name="beosztottak" type="integer"></element>
+										<element name="hasznalt_gyogyszerek" type="string"></element>
+										<element name="osztalyok" type="string"></element>
+										<element name="gyogyszer_id" type="integer"></element>
+										<element name="beteg_azonositokod" type="integer">
+											<unique name="PKkbeteg_azonositokod">
+												<selector xpath="korhaz" />
+												<field xpath="beteg_azonositokod" />
+											</unique>
+										</element>
+										<element name="bekerules_datuma" type="date"></element>
+										<element name="mennyiseg" type="integer"></element>
+										<element name="munkahely" type="string"></element>
+									</sequence>
+									<attribute name="id" type="string" />
+								</complexType>
+							</element>
+							<!-- < gyogyszerek adatai > -->
+							<element name="gyogyszer">
+								<complexType>
+									<sequence>
+										<element name="ar" type="integer"></element>
+										<element name="gyogyszer_azonosito" type="integer">
+											<unique name="PKgyogyszer_azonosito">
+												<selector xpath="gyogyszer" />
+												<field xpath="gyogyszer_azonosito" />
+											</unique>
+										</element>
+										<element name="nev" type="string"></element>
+										<element name="lejarat_ideje" type="date"></element>
+										<element name="mennyiseg" type="integer"></element>
+									</sequence>
+									<attribute name="id" type="string" />
+								</complexType>
+							</element>
+							<!-- < doktorok adatai > -->
+							<element name="doktor">
+								<complexType>
+									<sequence>
+										<element name="teljes_nev">
+											<complexType>
+												<sequence>
+													<element name="vezeteknev" type="string"></element>
+													<element name="keresztnev" type="string"></element>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="telefonszam" type="integer"></element>
+										<element name="szakterulet" type="string"></element>
+										<element name="doktor_azonositokod" type="integer">
+											<unique name="PKdoktor_azonositokod">
+												<selector xpath="doktor" />
+												<field xpath="doktor_azonositokod" />
+											</unique>
+										</element>
+										<element name="munkahely" type="string"></element>
+										<element name="kezeloorvos" type="string"></element>
+									</sequence>
+									<attribute name="id" type="string" />
+								</complexType>
+							</element>
+							<!-- < korkepek adatai > -->
+							<element name="korkep">
+								<complexType>
+									<sequence>
+										<element name="beteg_azonositokod" type="integer">
+											<unique name="PKkkbeteg_azonositokod">
+												<selector xpath="korkep" />
+												<field xpath="beteg_azonositokod" />
+											</unique>
+										</element>
+										<element name="datum" type="date"></element>
+										<element name="diagnozis" type="string"></element>
+										<element name="gyogyszerek" type="string"></element>
+										<element name="kezelo_orvos_neve" type="string"></element>
+									</sequence>
+									<attribute name="id" type="string" />
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
