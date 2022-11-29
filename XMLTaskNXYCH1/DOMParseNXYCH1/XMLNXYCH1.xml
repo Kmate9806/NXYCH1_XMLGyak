@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<betegnyilvantartorendszer>
+	<betegnyilvantartas>
+		<!--beteg 1-->
+		<beteg id="1">
+			<teljes_nev>
+				<vezeteknev>Kiss</vezeteknev>
+				<keresztnev>Mate</keresztnev>
+			</teljes_nev>
+			<kor>23</kor>
+			<orvos_azonosito>1</orvos_azonosito>
+			<telefonszam>06307032146</telefonszam>
+			<beteg_azonositokod>1</beteg_azonositokod>
+			<bekerules_datuma>2022-11-19</bekerules_datuma>
+			<kezeloorvos>dr.Kitalalt Ember</kezeloorvos>
+		</beteg>
+		<!--beteg 2-->
+		<beteg id="2">
+			<teljes_nev>
+				<vezeteknev>Kiss</vezeteknev>
+				<keresztnev>Antal</keresztnev>
+			</teljes_nev>
+			<kor>50</kor>
+			<orvos_azonosito>2</orvos_azonosito>
+			<telefonszam>06307032140</telefonszam>
+			<beteg_azonositokod>2</beteg_azonositokod>
+			<bekerules_datuma>2022-10-19</bekerules_datuma>
+			<kezeloorvos>dr.Masik Ember</kezeloorvos>
+		</beteg>
+		<!--beteg 3-->
+		<beteg id="3">
+			<teljes_nev>
+				<vezeteknev>Kiss</vezeteknev>
+				<keresztnev>Tamas</keresztnev>
+			</teljes_nev>
+			<kor>33</kor>
+			<orvos_azonosito>3</orvos_azonosito>
+			<telefonszam>06307032142</telefonszam>
+			<beteg_azonositokod>3</beteg_azonositokod>
+			<bekerules_datuma>2022-12-19</bekerules_datuma>
+			<kezeloorvos>dr.Igazi Ember</kezeloorvos>
+		</beteg>
+		<!--korhaz 1-->
+		<korhaz id="1">
+			<cim>Valami utca 5</cim>
+			<beosztottak>1</beosztottak>
+			<hasznalt_gyogyszerek>algopirin</hasznalt_gyogyszerek>
+			<osztalyok>Belgogyaszat, Surgossegi</osztalyok>
+			<gyogyszer_id>100</gyogyszer_id>
+			<beteg_azonositokod>1</beteg_azonositokod>
+			<bekerules_datuma>2022-11-19</bekerules_datuma>
+			<mennyiseg>100</mennyiseg>
+			<!--<munkahely>Surgossegi</munkahely>-->
+		</korhaz>
+		<!--korhaz 2-->
+		<korhaz id="2">
+			<cim>Masik utca 5</cim>
+			<beosztottak>2</beosztottak>
+			<hasznalt_gyogyszerek>cataflam</hasznalt_gyogyszerek>
+			<osztalyok>Belgogyaszat, Surgossegi</osztalyok>
+			<befogado_kepesseg>100</befogado_kepesseg>
+			<beteg_azonositokod>3</beteg_azonositokod>
+			<bekerules_datuma>2022-12-19</bekerules_datuma>
+			<mennyiseg>100</mennyiseg>
+			<!--<munkahely>Surgossegi</munkahely>-->
+		</korhaz>
+		<!--korhaz 3-->
+		<korhaz id="3">
+			<cim>Azaz utca 5</cim>
+			<beosztottak>3</beosztottak>
+			<hasznalt_gyogyszerek>aspirin</hasznalt_gyogyszerek>
+			<osztalyok>Belgogyaszat, Surgossegi</osztalyok>
+			<befogado_kepesseg>100</befogado_kepesseg>
+			<beteg_azonositokod>2</beteg_azonositokod>
+			<bekerules_datuma>2022-10-19</bekerules_datuma>
+			<mennyiseg>100</mennyiseg>
+			<!--<munkahely>Belgyogyaszat</munkahely>-->
+		</korhaz>
+		<!--gyogyszer 1-->
+		<gyogyszer id="1">
+			<ar>1000</ar>
+			<gyogyszer_azonosito>1</gyogyszer_azonosito>
+			<nev>algopirin</nev>
+			<lejarat_ideje>2025-12-12</lejarat_ideje>
+			<mennyiseg>12</mennyiseg>
+		</gyogyszer>
+		<!--gyogyszer 2-->
+		<gyogyszer id="2">
+			<ar>1100</ar>
+			<gyogyszer_azonosito>2</gyogyszer_azonosito>
+			<nev>aspirin</nev>
+			<lejarat_ideje>2025-12-12</lejarat_ideje>
+			<mennyiseg>12</mennyiseg>
+		</gyogyszer>
+		<!--gyogyszer 3-->
+		<gyogyszer id="3">
+			<ar>1500</ar>
+			<gyogyszer_azonosito>3</gyogyszer_azonosito>
+			<nev>cataflam</nev>
+			<lejarat_ideje>2025-12-12</lejarat_ideje>
+			<mennyiseg>12</mennyiseg>
+		</gyogyszer>
+		<!--doktor 1-->
+		<doktor id="1">
+			<teljes_nev>
+				<vezeteknev>dr.Kitalalt</vezeteknev>
+				<keresztnev>Ember</keresztnev>	
+			</teljes_nev>
+			<telefonszam>111111111111</telefonszam>
+			<szakterulet>Agysebesz</szakterulet>
+			<doktor_azonositokod>1</doktor_azonositokod>	
+			<munkahely>Surgossegi</munkahely>
+			<kezeloorvos>dr.Kitalalt Ember</kezeloorvos>
+		</doktor>
+		<!--doktor 2-->
+		<doktor id="2">
+			<teljes_nev>
+				<vezeteknev>dr.Masik</vezeteknev>
+				<keresztnev>Ember</keresztnev>	
+			</teljes_nev>
+			<telefonszam>222222222222</telefonszam>
+			<szakterulet>Fogorvos</szakterulet>
+			<doktor_azonositokod>2</doktor_azonositokod>	
+			<munkahely>Surgossegi</munkahely>
+			<kezeloorvos>dr.Masik Ember</kezeloorvos>
+		</doktor>
+		<!--doktor 3-->
+		<doktor id="3">
+			<teljes_nev>
+				<vezeteknev>dr.Igazi</vezeteknev>
+				<keresztnev>Ember</keresztnev>	
+			</teljes_nev>
+			<telefonszam>333333333333</telefonszam>
+			<szakterulet>Szivsebesz</szakterulet>
+			<doktor_azonositokod>3</doktor_azonositokod>	
+			<munkahely>Belgyogyaszat</munkahely>
+			<kezeloorvos>dr.Igazi Ember</kezeloorvos>
+		</doktor>
+		<!--korkep beteg 1-->
+		<korkep id="1">
+			<beteg_azonositokod>1</beteg_azonositokod>
+			<datum>2022-11-19</datum>
+			<diagnozis>Faj a feje</diagnozis>
+			<gyogyszerek>algopirin</gyogyszerek>
+			<kezelo_orvos_neve>dr.Kitalalt Ember</kezelo_orvos_neve>
+		</korkep>
+		<!--korkep beteg 2-->
+		<korkep id="2">
+			<beteg_azonositokod>2</beteg_azonositokod>
+			<datum>2022-10-19</datum>
+			<diagnozis>Faj a feje</diagnozis>
+			<gyogyszerek>cataflam</gyogyszerek>
+			<kezelo_orvos_neve>dr.Masik Ember</kezelo_orvos_neve>
+		</korkep>
+		<!--korkep beteg 3-->
+		<korkep id="3">
+			<beteg_azonositokod>3</beteg_azonositokod>
+			<datum>2022-12-19</datum>
+			<diagnozis>Faj a feje</diagnozis>
+			<gyogyszerek>aspirin</gyogyszerek>
+			<kezelo_orvos_neve>dr.Igazi Ember</kezelo_orvos_neve>
+		</korkep>
+	</betegnyilvantartas>	
+</betegnyilvantartorendszer>
