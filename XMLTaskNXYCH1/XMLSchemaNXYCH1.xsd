@@ -6,7 +6,6 @@
 	<element name="betegnyilvantartorendszer">
 		<complexType>
 			<sequence>
-
 				<element name="betegnyilvantartas">
 					<complexType>
 						<sequence>
@@ -17,44 +16,108 @@
 										<element name="teljes_nev">
 											<complexType>
 												<sequence>
-													<element name="vezeteknev" type="string"></element>
-													<element name="keresztnev" type="string"></element>
+													<element name="vezeteknev"> 
+														<simpleType>
+															<restriction base="string">
+   															</restriction>
+														</simpleType>
+													</element>
+													<element name="keresztnev">
+														<simpleType>
+															<restriction base="string">
+   															</restriction>
+														</simpleType>
+													</element>
 												</sequence>
 											</complexType>
 										</element>
-										<element name="kor" type="integer"></element>
-										<element name="orvos_azonosito" type="integer"></element>
-										<element name="telefonszam" type="integer"></element>
+										<element name="kor">
+											<simpleType>
+												<restriction base="integer">
+      											<minInclusive value="0"/>
+   												</restriction>
+											</simpleType>
+										</element>
+										<element name="orvos_azonosito">
+											<simpleType>
+												<restriction base="integer">
+      											<minInclusive value="0"/>
+   												</restriction>
+											</simpleType>
+										</element>
+										<element name="telefonszam">
+										 	<simpleType>
+										 		<restriction base="integer">
+										 		</restriction>
+										 	</simpleType>
+										</element>
 										<element name="beteg_azonositokod" type="integer">
-											<unique name="PKbeteg_azonositokod">
+											<key name="PKbeteg_azonositokod">
 												<selector xpath="beteg" />
 												<field xpath="beteg_azonositokod" />
-											</unique>
+											</key>
 										</element>
 										<element name="bekerules_datuma" type="date"></element>
-										<element name="kezeloorvos" type="string"></element>
+										<element name="kezeloorvos">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
 									</sequence>
-									<attribute name="id" type="string" />
+									<attribute name="id" type="integer" />
 								</complexType>
 							</element>
 							<!-- < korhazak adatai > -->
 							<element name="korhaz">
 								<complexType>
 									<sequence>
-										<element name="cim" type="string"></element>
-										<element name="beosztottak" type="integer"></element>
-										<element name="hasznalt_gyogyszerek" type="string"></element>
-										<element name="osztalyok" type="string"></element>
-										<element name="gyogyszer_id" type="integer"></element>
+										<element name="cim">
+										<simpleType>
+										 	<restriction base="string">
+										 	</restriction>
+										</simpleType>
+										 	</element>
+										<element name="beosztottak">
+										 	<simpleType>
+										 		<restriction base="integer">
+										 		</restriction>
+										 	</simpleType>
+										</element>
+										<element name="hasznalt_gyogyszerek">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
+										<element name="osztalyok">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+											 </simpleType>
+										</element>
+										<element name="gyogyszer_id" type="integer">	
+										</element>
 										<element name="beteg_azonositokod" type="integer">
-											<unique name="PKkbeteg_azonositokod">
+											<key name="PKkbeteg_azonositokod">
 												<selector xpath="korhaz" />
 												<field xpath="beteg_azonositokod" />
-											</unique>
+											</key>
 										</element>
 										<element name="bekerules_datuma" type="date"></element>
-										<element name="mennyiseg" type="integer"></element>
-										<element name="munkahely" type="string"></element>
+										<element name="mennyiseg">
+											<simpleType>
+												<restriction base="integer">
+      											<minInclusive value="0"/>
+   												</restriction>
+											</simpleType>
+										</element>
+										<element name="munkahely">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
 									</sequence>
 									<attribute name="id" type="string" />
 								</complexType>
@@ -63,18 +126,34 @@
 							<element name="gyogyszer">
 								<complexType>
 									<sequence>
-										<element name="ar" type="integer"></element>
+										<element name="ar" >
+											<simpleType>
+												<restriction base="integer">
+      											<minInclusive value="0"/>
+   												</restriction>
+											</simpleType>
+										</element>
 										<element name="gyogyszer_azonosito" type="integer">
-											<unique name="PKgyogyszer_azonosito">
+											<key name="PKgyogyszer_azonosito">
 												<selector xpath="gyogyszer" />
 												<field xpath="gyogyszer_azonosito" />
-											</unique>
+											</key>
 										</element>
-										<element name="nev" type="string"></element>
+										<element name="nev">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
 										<element name="lejarat_ideje" type="date"></element>
-										<element name="mennyiseg" type="integer"></element>
+										<element name="mennyiseg" >
+											<simpleType>
+										 		<restriction base="integer">
+										 		</restriction>
+											 </simpleType>
+										</element>
 									</sequence>
-									<attribute name="id" type="string" />
+									<attribute name="id" type="integer" />
 								</complexType>
 							</element>
 							<!-- < doktorok adatai > -->
@@ -84,21 +163,51 @@
 										<element name="teljes_nev">
 											<complexType>
 												<sequence>
-													<element name="vezeteknev" type="string"></element>
-													<element name="keresztnev" type="string"></element>
+													<element name="vezeteknev"> 
+														<simpleType>
+															<restriction base="string">
+   															</restriction>
+														</simpleType>
+													</element>
+													<element name="keresztnev">
+														<simpleType>
+															<restriction base="string">
+   															</restriction>
+														</simpleType>
+													</element>
 												</sequence>
 											</complexType>
 										</element>
-										<element name="telefonszam" type="integer"></element>
-										<element name="szakterulet" type="string"></element>
+										<element name="telefonszam">
+											<simpleType>
+										 		<restriction base="integer">
+										 		</restriction>
+										 	</simpleType>
+										</element>
+										<element name="szakterulet">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
 										<element name="doktor_azonositokod" type="integer">
-											<unique name="PKdoktor_azonositokod">
+											<key name="PKdoktor_azonositokod">
 												<selector xpath="doktor" />
 												<field xpath="doktor_azonositokod" />
-											</unique>
+											</key>
 										</element>
-										<element name="munkahely" type="string"></element>
-										<element name="kezeloorvos" type="string"></element>
+										<element name="munkahely">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
+										<element name="kezeloorvos">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
 									</sequence>
 									<attribute name="id" type="string" />
 								</complexType>
@@ -108,15 +217,35 @@
 								<complexType>
 									<sequence>
 										<element name="beteg_azonositokod" type="integer">
-											<unique name="PKkkbeteg_azonositokod">
+											<key name="PKkkbeteg_azonositokod">
 												<selector xpath="korkep" />
 												<field xpath="beteg_azonositokod" />
-											</unique>
+											</key>
 										</element>
-										<element name="datum" type="date"></element>
-										<element name="diagnozis" type="string"></element>
-										<element name="gyogyszerek" type="string"></element>
-										<element name="kezelo_orvos_neve" type="string"></element>
+										<element name="datum">
+										<simpleType>
+										 		<restriction base="date">
+										 		</restriction>
+										 	</simpleType>
+										</element>
+										<element name="diagnozis">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
+										<element name="gyogyszerek">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
+										<element name="kezelo_orvos_neve">
+											<simpleType>
+										 		<restriction base="string">
+										 		</restriction>
+										 	</simpleType>
+										</element>
 									</sequence>
 									<attribute name="id" type="string" />
 								</complexType>
